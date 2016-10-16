@@ -2,6 +2,7 @@
 
 Creates sitemap files
 
+[![GoDoc](https://godoc.org/github.com/pahanini/go-sitemap-generator.svg/stm?status.svg)](https://godoc.org/github.com/pahanini/go-sitemap-generator)
 [![Build Status](https://travis-ci.org/pahanini/go-sitemap-generator.svg)](https://travis-ci.org/pahanini/go-sitemap-generator)
 
 ## Usage
@@ -37,7 +38,7 @@ Sitemap comes with a variety of configuration options. Available Options:
 type Options struct {
 	// Filename is base file name for sitemap w/o extension
 	// - single file <filename>.xml
-	// - many files with sitemap index <filename>.xml (index file) and <filename>-<n>.xml (files with urls)
+	// - many files with sitemap index <filename>.xml index and <filename>-<n>.xml files
 	Filename string
 	// Max file size (default 10485760)
 	MaxFileSize int
@@ -50,4 +51,3 @@ type Options struct {
 }
 ```
 
-                                                                                                                              Render comes with a variety of configuration options (Note: these are not the default option values. See the defaults below.):
