@@ -45,14 +45,17 @@ func TestGenerator(t *testing.T) {
 	require.NoError(t, g.Add(URL{Loc: "test1"}))
 	require.NoError(t, g.Add(URL{Loc: "test2"}))
 	require.NoError(t, g.Add(URL{Loc: "test3"}))
+	require.NoError(t, g.Add(URL{Loc: "test4"}))
+	require.NoError(t, g.Add(URL{Loc: "test5"}))
 	require.NoError(t, g.Close())
 
 	files, _ := ioutil.ReadDir(g.opt.Dir)
-	require.Equal(t, 4, len(files))
+	require.Equal(t, 5, len(files))
 	require.Equal(t, "a.xml", files[0].Name())
 	require.Equal(t, "b-1.xml", files[1].Name())
 	require.Equal(t, "b-2.xml", files[2].Name())
-	require.Equal(t, "b.xml", files[3].Name())
+	require.Equal(t, "b-3.xml", files[3].Name())
+	require.Equal(t, "b.xml", files[4].Name())
 }
 
 func TestParamChecks(t *testing.T) {

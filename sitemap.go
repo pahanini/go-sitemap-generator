@@ -179,7 +179,7 @@ func (g *Generator) createIndex() error {
 	if err != nil {
 		return err
 	}
-	for i := 0; i <= g.fileCount; i++ {
+	for i := 0; i < g.fileCount; i++ {
 		_, err = f.Write([]byte(`<sitemap><loc>` + g.opt.BaseURL + g.opt.Filename + `-` +
 			strconv.Itoa(i+1) +
 			ext + `</loc></sitemap>`))
