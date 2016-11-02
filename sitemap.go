@@ -30,7 +30,7 @@ type Options struct {
 	BaseURL string
 }
 
-// New constructs a new Render instance with the supplied options.
+// New constructs a new Generator instance with the supplied options.
 func New(options ...Options) *Generator {
 	var o Options
 	if len(options) == 0 {
